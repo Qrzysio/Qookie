@@ -29,11 +29,13 @@ Parametr  "test: true" powoduje nie wysylanie ciasteczkaczyli po odswiezeniu str
 
 ### Zatwierdzanie zmian w GIT
 
-git tag -a v1.1 -m "v1.1"
+```
+git tag -a 1.2 -m "1.2"
 git commit -a -m "2016.05.05"
 
 git push origin master
 git push origin --tags
+```
 
 ### Licencja
 MIT
