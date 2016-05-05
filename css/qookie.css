@@ -1,9 +1,8 @@
 /* cookie - responsywne+svg, kwiecien 2016 */
-#cookieEU { clear:both;margin:0;background-color:#f5f5f5;padding:0;position:relative; }
-#cookieEU:after, #cookieEU .inner:after { content:'';display:block;clear:both; }
-#cookieEU a { color:#08f;text-decoration:none; }
-#cookieEU a:hover { text-decoration:underline; }
-#cookieEU .inner { margin:0 auto;max-width:550px; }
-#cookieEU .text { float:left;padding:15px;color:#666;font-family:Arial,sans-serif;font-size:1em;line-height:1.5em; }
-#cookieEU .close { display:block;float:right;width:50px;height:50px;background-repeat:no-repeat;background-position:center center;background-size:70% 70%;background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5NiA5NiI+PHBvbHlnb24gcG9pbnRzPSI5NiAxNCA4MiAwIDQ4IDM0IDE0IDAgMCAxNCAzNCA0OCAwIDgyIDE0IDk2IDQ4IDYyIDgyIDk2IDk2IDgyIDYyIDQ4ICIgZmlsbD0iI0FBQUFBQiIvPjwvc3ZnPg==');
- }
+#Qookie { clear:both;margin:0;background-color:#f5f5f5;padding:0;position:relative; }
+#Qookie:after, #Qookie .inner:after { content:'';display:block;clear:both; }
+#Qookie a { color:#08f;text-decoration:none; }
+#Qookie a:hover { text-decoration:underline; }
+#Qookie .inner { margin:0 auto;max-width:550px; }
+#Qookie .text { float:left;padding:15px;color:#666;font-family:Arial,sans-serif;font-size:1em;line-height:1.5em; }
+#Qookie .close { display:block;float:right;width:50px;height:50px;cursor:pointer;background-repeat:no-repeat;background-position:center center;background-size:70% 70%;background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5NiA5NiI+PHBvbHlnb24gcG9pbnRzPSI5NiAxNCA4MiAwIDQ4IDM0IDE0IDAgMCAxNCAzNCA0OCAwIDgyIDE0IDk2IDQ4IDYyIDgyIDk2IDk2IDgyIDYyIDQ4ICIgZmlsbD0iI0FBQUFBQiIvPjwvc3ZnPg=='); }
