@@ -1,23 +1,22 @@
 $.fn.extend({
   Qookie: function(options) {
-    var host = $(location).attr('protocol')+'//'+$(location).attr('hostname');
     var defaults = {
-      text: 'W ramach witryny stosujemy pliki cookies celem świadczenia usług na najwyższym poziomie. <a href="'+host+'/polityka-cookies/" title="Polityka cookies">Dowiedz się więcej</a>.',
+      link: $(location).attr('protocol')+'//'+$(location).attr('hostname')+'/polityka-cookies/',
       parent: $('body'),
-      cookie_name: 'QookieEuAgree_js',
+      cookie_name: 'Qookie',
       auto_accept: true,
       test: false
     };
     var o = $.extend(defaults, options);
     $('#Qookie').remove();
-    var box = $('<div id="Qookie"><div class="inner"><div class="text"><span class="close"></span>'+o.text+'</div></div></div>');
+    var box = $('<div class="container-fluid bg-faded" id="Qookie"><div class="container"><div class="row"><div class="col-10 p-0"><p class="text-muted text-center py-3 px-0 m-0">W ramach witryny stosujemy pliki cookies celem świadczenia usług na najwyższym poziomie. <a href="'+o.link+'" title="Polityka cookies">Dowiedz się więcej</a>.</p></div><div class="col-2 p-0"><button type="button" class="close p-3 d-block w-100" aria-label="Close"><span aria-hidden="true">&times;</span></button></div></div></div></div>');
     if (readCookie(o.cookie_name) == null) {
-      o.parent.prepend(box);                
+      o.parent.prepend(box);
       if (!o.test && o.auto_accept) createCookie(o.cookie_name, 1, 365)
     };
-    box.find('span').click(function(e) {
+    box.find('.close').click(function(e) {
       if (!o.test && !o.auto_accept) createCookie(o.cookie_name, 1, 365);
-      box.slideUp(350);                
+      box.slideUp(350);
     });
 
     function createCookie(name, value, days) {

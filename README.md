@@ -1,41 +1,53 @@
 # Opis
-Skrypt wyświetla na górze ekranu DIV informujący o ciasteczkach cookies, zgodnie z przepisami Unii Europejskiej.
-Kontener posiada przycisk zamykania "X" w formacie SVG oraz zestaw stylów CSS w pliku css/qookie.css
-### Wersja
-1.0
+Skrypt wyświetla na górze ekranu `div` informujący o ciasteczkach cookies, zgodnie z przepisami Unii Europejskiej.
+Kontener posiada przycisk zamykania `X` oraz m.in. możliwość podania odnośnika do polityki cookies.
+
+Style oparte na Bootstrap 4 (alpha 6).
+
+Wymagania: Bootstrap 4, jQuery 3+
+
 ### Instalacja
-Ręcznie lub bower
+Ręcznie lub poprzed Bower.
+
 ```
 bower install qookie
 ```
 ### Opcje
-Tymczasowo na czas testow mozna dodac sobie parametr w kodzie HTML.
+
+| Wartość       | Typ            | Domyślnie                                                                             |
+|---------------|----------------|---------------------------------------------------------------------------------------|
+| link          | url (string)   | `$(location).attr('protocol')+'//'+$(location).attr('hostname')+'/polityka-cookies/'` |
+| parent        | HTML tag       | `$('body')`                                                                           |
+| cookie_name   | string         | `Qookie`                                                                              |
+| auto_accept   | boolean        | `true`                                                                                  |
+| test          | boolean        | `false`                                                                                 |
+
+### Użycie
+
+Przykładowe użycie.
 
 ```
 <script type="text/javascript">
 $(function() {
-	$.fn.cookiesEU(
-	{
-		test:		true,
-		close:		'Zamknij'
-	}
-	);
+    $.fn.Qookie(
+    {
+        link: 'http://example.com/polityka-cookies-danej-witryny/'
+    });
 });
 </script>
 ```
 
-Dodatkowo:
-Parametr  "test: true" powoduje nie wysylanie ciasteczkaczyli po odswiezeniu strony komunikat nadal bedzie sie pojawiac.
-
-### Zatwierdzanie zmian w GIT
-
+W czasie testów możemy dopisać parametr `test`.
 ```
-git tag -a 1.2 -m "1.2"
-git commit -a -m "2016.05.05"
-
-git push origin master
-git push origin --tags
+<script type="text/javascript">
+$(function() {
+    $.fn.Qookie(
+    {
+        test: true.
+        link: 'http://example.com/polityka-cookies-danej-witryny/'
+    });
+});
+</script>
 ```
-
 ### Licencja
 MIT
