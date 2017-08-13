@@ -2,16 +2,23 @@
 Skrypt wyświetla na górze ekranu `div` informujący o ciasteczkach cookies, zgodnie z przepisami Unii Europejskiej.
 Kontener posiada przycisk zamykania `X` oraz m.in. możliwość podania odnośnika do polityki cookies.
 
-Style oparte na Bootstrap 4 (alpha 6).
+Style oparte na Bootstrap 4 (beta 1).
 
 Wymagania: Bootstrap 4, jQuery 3+
 
 ### Instalacja
-Ręcznie lub poprzed Bower.
+Ręcznie, Bower lub npm.
 
+Bower
 ```
 bower install qookie
 ```
+
+npm
+```
+npm install qookie
+```
+
 ### Opcje
 
 | Wartość       | Typ            | Domyślnie                                                                             |
