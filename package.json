@@ -6,6 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "peerDependencies": {
+    "bootstrap": "4.0.0-beta"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Qrzysio/Qookie.git"
@@ -15,7 +18,6 @@
     "cookies",
     "ue",
     "eu",
-    "jquery",
     "qookie"
   ],
   "author": "Qrzysio <krzysiek@chojnowski.us>",
