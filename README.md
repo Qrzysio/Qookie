@@ -4,7 +4,7 @@ Kontener posiada przycisk zamykania `X` oraz m.in. możliwość podania odnośni
 
 Style oparte na Bootstrap 4 (beta 1).
 
-Wymagania: Bootstrap 4, jQuery 3+
+Wymagania: Bootstrap 4, jQuery
 
 ### Instalacja
 Ręcznie, Bower lub npm.
