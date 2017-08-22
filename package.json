@@ -1,6 +1,6 @@
 {
   "name": "qookie",
-  "version": "2.0.2",
+  "version": "2.0.4",
   "description": "Another jQuery plugin displaying info (in polish) about site uses cookies.",
   "main": "qookie.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "peerDependencies": {
     "bootstrap": "4.0.0-beta",
-    "jquery": "=>3.2.0"
+    "jquery": ">=3.2.0"
   },
   "repository": {
     "type": "git",
