@@ -9,7 +9,7 @@ $.fn.extend({
     };
     var o = $.extend(defaults, options);
     $('#Qookie').remove();
-    var box = $('<div class="container-fluid bg-faded" id="Qookie"><div class="container"><div class="row"><div class="col-10 p-0"><p class="text-muted text-center py-3 px-0 m-0">W ramach witryny stosujemy pliki cookies celem świadczenia usług na najwyższym poziomie. <a href="'+o.link+'" title="Polityka cookies">Dowiedz się więcej</a>.</p></div><div class="col-2 p-0"><button type="button" class="close p-3 d-block w-100" aria-label="Close"><span aria-hidden="true">&times;</span></button></div></div></div></div>');
+    var box = $('<div class="container-fluid bg-light" id="Qookie"><div class="container"><div class="row"><div class="col-10 p-0"><p class="text-muted text-center py-3 px-0 m-0">W ramach witryny stosujemy pliki cookies celem świadczenia usług na najwyższym poziomie. <a href="'+o.link+'" title="Polityka cookies">Dowiedz się więcej</a>.</p></div><div class="col-2 p-0"><button type="button" class="close p-3 d-block w-100" aria-label="Close"><span aria-hidden="true">&times;</span></button></div></div></div></div>');
     if (readCookie(o.cookie_name) == null) {
       o.parent.prepend(box);
       if (!o.test && o.auto_accept) createCookie(o.cookie_name, 1, 365)
