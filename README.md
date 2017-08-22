@@ -50,7 +50,7 @@ W czasie testów możemy dopisać parametr `test`.
 $(function() {
     $.fn.Qookie(
     {
-        test: true.
+        test: true,
         link: 'http://example.com/polityka-cookies-danej-witryny/'
     });
 });
