@@ -1,14 +1,14 @@
 {
   "name": "qookie",
-  "version": "2.0.6",
+  "version": "3.0.0",
   "description": "Another jQuery plugin displaying info (in polish) about site uses cookies.",
   "main": "qookie.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "dependencies": {},
   "peerDependencies": {
-    "bootstrap": "4.0.0-beta",
-    "jquery": ">=3.2.0"
+    "jquery": ">=1.10.0"
   },
   "repository": {
     "type": "git",
@@ -16,6 +16,7 @@
   },
   "keywords": [
     "cookie",
+    "policy",
     "cookies",
     "ue",
     "eu",
@@ -26,5 +27,5 @@
   "bugs": {
     "url": "https://github.com/Qrzysio/Qookie/issues"
   },
-  "homepage": "https://github.com/Qrzysio/Qookie#readme"
+  "homepage": "https://github.com/Qrzysio/Qookie"
 }

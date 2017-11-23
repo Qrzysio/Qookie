@@ -1,43 +1,72 @@
-$.fn.extend({
-  Qookie: function(options) {
-    var defaults = {
-      link: $(location).attr('protocol')+'//'+$(location).attr('hostname')+'/polityka-cookies/',
-      parent: $('body'),
-      cookie_name: 'Qookie',
-      auto_accept: true,
-      test: false
-    };
-    var o = $.extend(defaults, options);
-    $('#Qookie').remove();
-    var box = $('<div class="container-fluid bg-light" id="Qookie"><div class="container"><div class="row"><div class="col-10 p-0"><p class="text-muted text-center py-3 px-0 m-0">W ramach witryny stosujemy pliki cookies celem świadczenia usług na najwyższym poziomie. <a href="'+o.link+'" title="Polityka cookies">Dowiedz się więcej</a>.</p></div><div class="col-2 p-0"><button type="button" class="close p-3 d-block w-100" aria-label="Close"><span aria-hidden="true">&times;</span></button></div></div></div></div>');
-    if (readCookie(o.cookie_name) == null) {
-      o.parent.prepend(box);
-      if (!o.test && o.auto_accept) createCookie(o.cookie_name, 1, 365)
-    };
-    box.find('.close').click(function(e) {
-      if (!o.test && !o.auto_accept) createCookie(o.cookie_name, 1, 365);
-      box.slideUp(350);
-    });
+(function ($) {
+    "use strict";
 
-    function createCookie(name, value, days) {
-      if (days) {
-        var date = new Date();
-        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-        var expires = "; expires=" + date.toGMTString()
-      } else var expires = "";
-      var cookie = name + "=" + value + expires + "; path=/";
-      document.cookie = cookie
-    };
-
-    function readCookie(name) {
-      var nameEQ = name + "=";
-      var ca = document.cookie.split(';');
-      for (var i = 0; i < ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length)
-      }
-    return null
+    if (!$) {
+        return;
     }
-  }
-})
+
+    $.fn.Qookie = function (options) {
+        var settings = $.extend({
+            link: $(location).attr("protocol") + "//" + $(location).attr("hostname") + "/polityka-cookies/",
+            parent: $("body"),
+            cookie_name: "Qookie",
+            auto_accept: true,
+            test: false
+        }, options);
+
+        function createCookie(name, value, days) {
+            var cookie = name + "=" + value;
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                cookie += "; expires=" + date.toGMTString();
+            }
+            document.cookie = cookie + "; path=/";
+        }
+
+        function readCookie(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(";");
+            var i, c;
+
+            for (i = 0; i < ca.length; i += 1) {
+                c = ca[i];
+                while (c.charAt(0) === " ") {
+                    c = c.substring(1, c.length);
+                }
+
+                if (c.indexOf(nameEQ) === 0) {
+                    return c.substring(nameEQ.length, c.length);
+                }
+            }
+            return null;
+        }
+
+        $("#Qookie").remove();
+        var box = $('<div style="background-color:#f3f3f3;padding:25px;margin:0;clear:both;" id="Qookie">' +
+    '<div style="max-width:1000px;display:block;margin:0 auto;">' +
+        '<div style="display:block;clear:both;">' +
+            '<button style="border:none;background:none;line-height:60px;padding:0px 10px;margin:-25px;font-size:50px;font-weight:bold;float:right;cursor:pointer;display:block;color:#999;" type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>' +
+            '<div style="width:90%;display:inline-block;color:#888;font-size:16px;font-family:sans-serif;">' +
+                '<p style="margin:0;padding:0;line-height:normal;">W ramach witryny stosujemy pliki cookies celem świadczenia usług na najwyższym poziomie. <a href="' + settings.link + '" style="color:#666;text-decoration:underline;" title="Polityka cookies" target="_blank">Dowiedz się więcej</a>.</p>' +
+            '</div>' +
+        '</div>' +
+    '</div>' +
+'</div>');
+
+        if (readCookie(settings.cookie_name) === null) {
+            settings.parent.prepend(box);
+
+            if (!settings.test && settings.auto_accept) {
+                createCookie(settings.cookie_name, 1, 365);
+            }
+        }
+
+        box.find(".close").click(function () {
+            if (!settings.test && !settings.auto_accept) {
+                createCookie(settings.cookie_name, 1, 365);
+            }
+            box.slideUp(350);
+        });
+    };
+}(jQuery));

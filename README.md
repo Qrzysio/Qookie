@@ -1,22 +1,23 @@
 # Opis
-Skrypt wyświetla na górze ekranu `div` informujący o ciasteczkach cookies, zgodnie z przepisami Unii Europejskiej.
+Plugin wyświetla na górze ekranu kontener (`div`) informujący o uzywaniu przez witrynę ciasteczek cookies, zgodnie z przepisami Unii Europejskiej.
+
+Treść komunikatu:
+> W ramach witryny stosujemy pliki cookies celem świadczenia usług na najwyższym poziomie. [Dowiedz się więcej](https://www.example.com).
+
 Kontener posiada przycisk zamykania `X` oraz m.in. możliwość podania odnośnika do polityki cookies.
-
-Style oparte na Bootstrap 4 (beta 1).
-
-Wymagania: Bootstrap 4, jQuery
+Najnowsza wersja jest pluginem jQuery (wcześniej funkcja). Skrypt oparty został na własnych stylach CSS, jest responsywny.
 
 ### Instalacja
-Ręcznie, Bower lub npm.
-
-Bower
-```
-bower install qookie
-```
+Ręcznie lub npm.
 
 npm
 ```
 npm install qookie
+```
+
+yarn
+```
+yarn add qookie
 ```
 
 ### Opcje
@@ -36,23 +37,25 @@ Przykładowe użycie.
 ```
 <script type="text/javascript">
 $(function() {
-    $.fn.Qookie(
-    {
-        link: 'http://example.com/polityka-cookies-danej-witryny/'
-    });
+
+  $().Qookie({
+    link: 'https://www.google.pl'
+  });
+
 });
 </script>
 ```
 
-W czasie testów możemy dopisać parametr `test`.
+Na czas testów można ustawić parametr `test` jak `true`, wtedy skrypt nie wysyła ciasteczka i można łatwiej zmieniać np. ostylowanie.
 ```
 <script type="text/javascript">
 $(function() {
-    $.fn.Qookie(
-    {
-        test: true,
-        link: 'http://example.com/polityka-cookies-danej-witryny/'
-    });
+
+  $().Qookie({
+    test:   true,
+    link: 'https://www.google.pl'
+  });
+
 });
 </script>
 ```
