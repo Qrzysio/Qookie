@@ -1,6 +1,6 @@
 {
   "name": "qookie",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Another jQuery plugin displaying info (in polish) about site uses cookies.",
   "main": "qookie.js",
   "scripts": {
