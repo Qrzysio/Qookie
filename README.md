@@ -5,7 +5,7 @@ Treść komunikatu:
 > W ramach witryny stosujemy pliki cookies celem świadczenia usług na najwyższym poziomie. [Dowiedz się więcej](https://www.example.com).
 
 Kontener posiada przycisk zamykania `X` oraz m.in. możliwość podania odnośnika do polityki cookies.
-Najnowsza wersja jest pluginem jQuery (wcześniej funkcja). Skrypt oparty został na własnych stylach CSS, jest responsywny.
+Najnowsza wersja jest pluginem jQuery (wcześniej funkcja). Skrypt oparty został na własnych stylach CSS, jest responsywny, działa poprawnie z Bootstrapem i innymi frameworkami CSS.
 
 ### Instalacja
 Ręcznie lub npm.
@@ -39,7 +39,7 @@ Przykładowe użycie.
 $(function() {
 
   $().Qookie({
-    link: 'https://www.google.pl'
+    link: 'https://www.mojadomena.pl/polityka-cookies/'
   });
 
 });
@@ -48,13 +48,13 @@ $(function() {
 
 Na czas testów można ustawić parametr `test` jak `true`, wtedy skrypt nie wysyła ciasteczka i można łatwiej zmieniać np. ostylowanie.
 ```
-<script type="text/javascript">
+<script>
 $(function() {
 
-  $().Qookie({
-    test:   true,
-    link: 'https://www.google.pl'
-  });
+    $().Qookie({
+        test:   true,
+        link: 'https://www.mojadomena.pl/polityka-cookies/'
+    });
 
 });
 </script>
