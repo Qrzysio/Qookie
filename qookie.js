@@ -43,13 +43,25 @@
         }
 
         $("#Qookie").remove();
-        var box = $('<div style="background-color:#f3f3f3;padding:25px;margin:0;clear:both;display:block;z-index:10000;" id="Qookie">' +
+        var button_width, container_width, button_padding;
+        if (screen.width < 500) {
+            button_width = '100%';
+            container_width = '100%';
+            button_padding = '0';
+        } else {
+            button_width = '9%';
+            container_width = '90%';
+            button_padding = '0.5em 0';
+        }
+
+        var box = $('<div style="background-color:#f4f4f4;padding:10px;margin:0;clear:both;display:block;z-index:100000;font-size:16px;overflow:hidden;" id="Qookie">' +
     '<div style="max-width:1000px;display:block;margin:0 auto;">' +
         '<div style="display:block;clear:both;">' +
-            '<button style="border:none;background:none;line-height:60px;padding:0px 10px;margin:-25px;font-size:50px;font-weight:bold;float:right;cursor:pointer;display:block;color:#999;" type="button" class="close" aria-label="Zamknij"><span aria-hidden="true">&times;</span></button>' +
-            '<div style="width:90%;display:inline-block;color:#888;font-size:16px;font-family:sans-serif;">' +
-                '<p style="margin:0;padding:0;line-height:normal;">W ramach witryny stosujemy pliki cookies celem świadczenia usług na najwyższym poziomie. <a href="' + settings.link + '" style="color:#666;text-decoration:underline;" title="Polityka cookies" target="_blank">Dowiedz się więcej</a>.</p>' +
+            '<div style="width:' + container_width + ';display:inline-block;color:#777;font-size:16px;font-family:sans-serif;">' +
+                '<p style="margin:0;padding:5px;line-height:1.5em;">W <a href="' + settings.link + '" style="color:#777;text-decoration:underline;" target="_blank">Polityce prywatności</a> zawarliśmy szczegółowe informacje z zakresu przetwarzania danych osobowych zbieranych podczas korzystania przez internautów z naszej witryny. Zachęcamy do <a href="' + settings.link + '" style="color:#777;text-decoration:underline;" target="_blank">zapoznania się z nimi</a>.</p>' +
+                '<p style="margin:0;padding:5px;line-height:1.5em;">Używamy plików cookies i podobnych technologii zgodnie z <a href="' + settings.link + '" style="color:#777;text-decoration:underline;" target="_blank">Polityką prywatności</a>. Możesz wyłączyć ten mechanizm w ustawieniach przeglądarki.</p>' +
             '</div>' +
+            '<button style="width:' + button_width + ';clear:both;border:none;background:none;line-height:1em;padding:' + button_padding + ';margin:0px;font-size:3em;font-weight:bold;cursor:pointer;display:inline-block;color:#999;" type="button" class="close" aria-label="Zamknij"><span aria-hidden="true">&times;</span></button>' +
         '</div>' +
     '</div>' +
 '</div>');
