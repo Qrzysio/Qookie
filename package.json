@@ -1,7 +1,7 @@
 {
   "name": "qookie",
-  "version": "3.0.2",
-  "description": "Simple jQuery plugin displaying info (in polish) about site uses cookies.",
+  "version": "4.0.0",
+  "description": "Simple jQuery plugin displaying info (in polish) about site uses cookies and linking to privacy policy.",
   "main": "qookie.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,6 +17,10 @@
   "keywords": [
     "cookie",
     "policy",
+    "poland",
+    "rodo",
+    "gdpr",
+    "giodo",
     "cookies",
     "ue",
     "eu",
