@@ -1,6 +1,6 @@
 {
   "name": "qookie",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "Simple jQuery plugin displaying info (in polish) about site uses cookies and linking to privacy policy.",
   "main": "qookie.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "dependencies": {},
   "peerDependencies": {
-    "jquery": ">=1.12.0"
+    "jquery": ">=1.12.4"
   },
   "repository": {
     "type": "git",
