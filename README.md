@@ -20,7 +20,7 @@ yarn add qookie
 ```
 
 CDN
-`<script src="https://cdn.jsdelivr.net/npm/qookie@3.0.0/qookie.min.js"></script>`
+`<script src="https://cdn.jsdelivr.net/npm/qookie@4/qookie.min.js"></script>`
 
 
 ### Opcje
