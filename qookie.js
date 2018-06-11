@@ -1,3 +1,4 @@
+/*! Qookie 4.0.3 */
 (function ($) {
     "use strict";
 
