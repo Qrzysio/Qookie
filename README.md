@@ -42,9 +42,11 @@ Przykładowe użycie.
 ```
 <script>
 $(function() {
-  $().Qookie({
-    link: 'https://www.mojadomena.pl/polityka-prywatnosci/'
-  });
+    if ($.fn.Qookie) {
+        $().Qookie({
+            link: 'https://www.mojadomena.pl/polityka-prywatnosci/'
+        });
+    }
 });
 </script>
 ```
@@ -53,10 +55,12 @@ Na czas testów można ustawić parametr `test` jako `true`, wtedy skrypt nie wy
 ```
 <script>
 $(function() {
-    $().Qookie({
-        test:  true,
-        link: 'https://www.mojadomena.pl/polityka-prywatnosci/'
-    });
+    if ($.fn.Qookie) {
+        $().Qookie({
+            test:  true,
+            link: 'https://www.mojadomena.pl/polityka-prywatnosci/'
+        });
+    }
 });
 </script>
 ```
